@@ -1,0 +1,300 @@
+a=100;
+100
+b = 200;
+200
+c = a +b;
+300
+a=100.20;
+100.2
+a="Hello";
+"Hello"
+typeof a;
+"string"
+var e = 1000;
+undefined
+function test(){
+x = 1000;
+}
+undefined
+test();
+undefined
+x;
+1000
+function test(){
+var z = 1000;
+}
+undefined
+test();
+undefined
+z;
+VM153:1 Uncaught ReferenceError: z is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM153:1
+var t =100;
+undefined
+typeof t;
+"number"
+t=100.20;
+100.2
+typeof t;
+"number"
+t =1;
+1
+typeof t;
+"number"
+t =1000000;
+1000000
+typeof t;
+"number"
+t="Hello";
+"Hello"
+typeof t;
+"string"
+t='Hello';
+"Hello"
+typeof t;
+"string"
+t="Don't Know ";
+"Don't Know "
+t=true;
+true
+typeof t;
+"boolean"
+t=[];
+[]
+typeof t;
+"object"
+t instanceof Array;
+true
+typeof Array;
+"function"
+t="A";
+"A"
+typeof t;
+"string"
+t='A';
+"A"
+typeof t;
+"string"
+t=[];
+[]
+typeof t;
+"object"
+console.dir(t);
+VM320:1 Array(0)length: 0__proto__: Array(0)
+undefined
+t;
+[]
+t.length
+0
+Array.prototype;
+[constructor: function, toString: function, toLocaleString: function, join: function, pop: function…]concat: function concat()constructor: function Array()copyWithin: function copyWithin()entries: function entries()every: function every()fill: function fill()filter: function filter()find: function find()findIndex: function findIndex()forEach: function forEach()includes: function includes()indexOf: function indexOf()join: function join()keys: function keys()lastIndexOf: function lastIndexOf()length: 0map: function map()pop: function pop()push: function push()reduce: function reduce()reduceRight: function reduceRight()reverse: function reverse()shift: function shift()slice: function slice()some: function some()sort: function sort()splice: function splice()toLocaleString: function toLocaleString()toString: function toString()unshift: function unshift()Symbol(Symbol.iterator): function values()Symbol(Symbol.unscopables): Object__proto__: Object
+t= {};
+Object {}
+t = {id:1001,name:'Ram',salary:11111};
+Object {id: 1001, name: "Ram", salary: 11111}
+t.id;
+1001
+t.name;
+"Ram"
+var post = {post:'First Post',likes:10,comments:["hgkjdf","gdfgd"]};
+undefined
+typeof post;
+"object"
+var post2 = {post:'Second Post',likes:20,comments:["hgkjdf","gdfgd"]};
+undefined
+var posts=[post,post2];
+undefined
+posts;
+(2) [Object, Object]0: Objectcomments: Array(2)0: "hgkjdf"1: "gdfgd"length: 2__proto__: Array(0)likes: 10post: "First Post"__proto__: Object1: Objectcomments: Array(2)0: "hgkjdf"1: "gdfgd"length: 2__proto__: Array(0)likes: 20post: "Second Post"__proto__: Objectlength: 2__proto__: Array(0)
+post;
+Object {post: "First Post", likes: 10, comments: Array(2)}
+post = null;
+null
+typeof post;
+"object"
+var g = 100;
+undefined
+typeof g;
+"number"
+g = null;
+null
+typeof g;
+"object"
+g = 0;
+0
+var gg;
+undefined
+typeof gg;
+"undefined"
+function show(){
+return 10000;
+}
+undefined
+show();
+10000
+var gg = show;
+undefined
+typeof gg;
+"function"
+gg;
+function show(){
+return 10000;
+}
+gg();
+10000
+var x = function(){
+console.log("Hello Function");
+}
+undefined
+typeof x;
+"function"
+x();
+VM797:2 Hello Function
+undefined
+function process(rank){
+if(rank>100){
+var d = function(){
+return "U Get Selection in CS ";
+}
+return d;
+}
+else{
+var r  = function(){
+return "U Get Selection in IT";
+}
+return r;
+}
+
+}
+undefined
+var k = process(120);
+undefined
+k;
+function (){
+return "U Get Selection in CS ";
+}
+typeof k;
+"function"
+k();
+"U Get Selection in CS "
+var k = process(20);
+undefined
+k();
+"U Get Selection in IT"
+function process(rank){
+if(rank>100){
+var d = function(){
+return "U Get Selection in CS ";
+}
+return d;
+}
+else{
+var r  = function(){
+return "U Get Selection in IT";
+}
+return r;
+}
+
+}
+undefined
+var g = process(20)
+undefined
+typeof g;
+"function"
+g;
+function (){
+return "U Get Selection in IT";
+}
+g();
+"U Get Selection in IT"
+process(20)();
+"U Get Selection in IT"
+process(120)();
+"U Get Selection in CS "
+var g = process(120)();
+undefined
+typeof g;
+"string"
+g;
+"U Get Selection in CS "
+function display(){
+var s = 100;
+if(s==100){
+var t = 999;
+}
+}
+undefined
+function display(){
+var s = 100;
+if(s==100){
+var t = 999;
+}
+}
+undefined
+function display(){
+var s = 100;
+if(s==100){
+var t = 999;
+}
+}
+undefined
+function display(){ console.log("S is "+s);
+var s = 100;
+if(s==100){
+var t = 999;
+}
+}
+undefined
+function display(){ console.log("T is "+s);
+var s = 100;
+if(s==100){
+var t = 999;
+}
+}
+undefined
+function display(){ console.log("T is "+t);
+var s = 100;
+if(s==100){
+var t = 999;
+}
+}
+undefined
+var bb;
+undefined
+bb;
+undefined
+kkk
+VM1316:1 Uncaught ReferenceError: kkk is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1316:1
+display();
+VM1294:1 T is undefined
+undefined
+function display(){ console.log("T is "+t+" RRR "+rrr);
+var s = 100;
+if(s==100){
+var t = 999;
+}
+}
+undefined
+display();
+VM1345:1 Uncaught ReferenceError: rrr is not defined
+    at display (<anonymous>:1:51)
+    at <anonymous>:1:1
+display @ VM1345:1
+(anonymous) @ VM1359:1
+function display(){ console.log("T is "+t);
+var s = 100;
+if(s==100){
+var t = 999;
+}
+}
+undefined
+display();
+VM1366:1 T is undefined
+undefined
+var ee = 100;
+undefined
+hh = 100;
+100
