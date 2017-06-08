@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var counter =0;
+	function add(){
+		counter++;
+		document.getElementById("count").innerHTML = counter;
+	}
+		function subtract(){
+		counter--;
+		document.getElementById("count").innerHTML = counter;
+	}
+		/*
+		document.getElementById("txt").value=90;
+90
+document.getElementById("txt").value="amit";
+"amit"
+document.getElementById("txt").value;
+"10000"
+*/
+	</script>
+</head>
+<body>
+<input type="text" id="txt" value="Type Here">
+	<table>
+		<tr>
+			<td><button onclick="add()">+</button></td>
+			<h1>Count is <span id="count">0</span> </h1>
+			<td><button onclick="subtract()">-</button></td>
+		</tr>
+	</table>
+</body>
+</html>
