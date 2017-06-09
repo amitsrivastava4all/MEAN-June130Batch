@@ -1,0 +1,93 @@
+var list = [10,20,30,40,50];
+undefined
+typeof list;
+"object"
+list instanceof Array;
+true
+function myprint(ele){
+console.log("Element is ",ele);
+}
+undefined
+myprint(100);
+VM252:2 Element is  100
+undefined
+list.forEach(myprint);
+VM252:2 Element is  10
+VM252:2 Element is  20
+VM252:2 Element is  30
+VM252:2 Element is  40
+VM252:2 Element is  50
+undefined
+list.forEach(function(ele){
+console.log("Value is ",ele);
+});
+VM371:2 Value is  10
+VM371:2 Value is  20
+VM371:2 Value is  30
+VM371:2 Value is  40
+VM371:2 Value is  50
+undefined
+function evenOdd(x){
+return x%2==0?"Even "+x:"Odd "+x;
+}
+undefined
+evenOdd(4);
+"Even 4"
+evenOdd(3);
+"Odd 3"
+function twoTable(i){
+return 2 * i;
+}
+undefined
+twoTable(2);
+4
+twoTable(3);
+6
+function loop(fn){
+for(var i = 1; i<=10; i++){
+fn(i);
+}
+}
+undefined
+loop(evenOdd);
+undefined
+function loop(fn){
+for(var i = 1; i<=10; i++){
+console.log(fn(i));
+}
+}
+undefined
+loop(evenOdd);
+VM606:3 Odd 1
+VM606:3 Even 2
+VM606:3 Odd 3
+VM606:3 Even 4
+VM606:3 Odd 5
+VM606:3 Even 6
+VM606:3 Odd 7
+VM606:3 Even 8
+VM606:3 Odd 9
+VM606:3 Even 10
+undefined
+loop(twoTable);
+VM606:3 2
+VM606:3 4
+VM606:3 6
+VM606:3 8
+VM606:3 10
+VM606:3 12
+VM606:3 14
+VM606:3 16
+VM606:3 18
+VM606:3 20
+undefined
+function loop(fn){
+for(var i = 1; i<=10; i++){
+console.log(fn(i));
+}
+}
+undefined
+Array.prototype;
+[constructor: function, toString: function, toLocaleString: function, join: function, pop: function…]concat: function concat()constructor: function Array()copyWithin: function copyWithin()entries: function entries()every: function every()fill: function fill()filter: function filter()find: function find()findIndex: function findIndex()forEach: function forEach()includes: function includes()indexOf: function indexOf()join: function join()keys: function keys()lastIndexOf: function lastIndexOf()length: 0map: function map()pop: function pop()push: function push()reduce: function reduce()reduceRight: function reduceRight()reverse: function reverse()shift: function shift()slice: function slice()some: function some()sort: function sort()splice: function splice()toLocaleString: function toLocaleString()toString: function toString()unshift: function unshift()Symbol(Symbol.iterator): function values()Symbol(Symbol.unscopables): Object__proto__: Object
+HTMLCollection.prototype;
+HTMLCollection {Symbol(Symbol.toStringTag): "HTMLCollection", item: function, namedItem: function, constructor: function…}item: function item()length: (...)namedItem: function namedItem()constructor: function HTMLCollection()Symbol(Symbol.iterator): function values()Symbol(Symbol.toStringTag): "HTMLCollection"get length: function ()__proto__: Object
