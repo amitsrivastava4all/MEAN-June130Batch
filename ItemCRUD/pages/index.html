@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ITEM - CRUD</title>
+	<link rel="stylesheet" href="../css/custom.css">
+	<script src="../js/model.js"></script>
+	<script src="../js/controller.js"></script>
+</head>
+<body>
+<fieldset>
+	<legend>Item</legend>
+
+	<table>
+		<tr>
+			<td><label for="itemno">Id</label></td>
+			<td><span id="itemno"></span></td>
+		</tr>
+		<tr>
+			<td><label >Name</label></td>
+			<td><input class="clearfields" type="text" placeholder="Type Item Name" id="name"></td>
+		</tr>
+		<tr>
+			<td><label >Desc</label></td>
+			<td><textarea class="clearfields" id="desc" cols="30" rows="10" placeholder="Type Desc Here"></textarea>
+		</tr>
+		<tr>
+			<td><label >Price</label></td>
+			<td><input class="clearfields" type="text" placeholder="Type Item Price" id="price"></td>
+		</tr>
+		<tr>
+			<td><label >Qt</label></td>
+			<td><input class="clearfields" type="text" placeholder="Type Item Qt" id="qt"></td>
+		</tr>
+		<tr>
+			<td><label >URL</label></td>
+			<td><input class="clearfields" type="text" placeholder="Type Item URL" id="url"></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table>
+					<tr>
+						<td>
+							<button id="add">Add</button>
+							<button>Delete</button>
+							<button>Search</button>
+							<button>Update</button>
+							<button>Save</button>
+							<button>Load</button>
+							<button>Sort</button>
+							<button>Clear</button>
+							<button>Save to Server</button>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	</fieldset>
+	<fieldset>
+		<legend>ItemList</legend>
+		<table border="1">
+			<thead>
+				<tr>
+					<td>Id</td>
+					<td>Name</td>
+					<td>Desc</td>
+					<td>Price</td>
+					<td>Qt</td>
+					<td>Url</td>
+					<td>Operations</td>
+				</tr>
+			</thead>
+			<tbody id="itemlist">
+				
+			</tbody>
+		</table>
+	</fieldset>
+</body>
+</html>
