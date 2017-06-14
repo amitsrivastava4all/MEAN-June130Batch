@@ -1,0 +1,131 @@
+const person = {
+  first: 'Wes',
+  last: 'Bos',
+  country: 'Canada',
+  city: 'Hamilton',
+  twitter: '@wesbos'
+};
+undefined
+const { first, last } = person;
+undefined
+first
+"Wes"
+last
+"Bos"
+var w=[10,20,30,40];
+undefined
+var [pp,qq]=w;
+undefined
+pp;
+10
+qq;
+20
+var [pp,,,kk]=w;
+undefined
+kk;
+40
+var a=100;
+undefined
+var b = 200;
+undefined
+[a,b]=[b,a]
+(2) [200, 100]
+var bb = {x:100,y:200,z:300};
+undefined
+var {x,z}=bb;
+undefined
+x;
+100
+z;
+300
+var bb1=[100,200,300];
+undefined
+[gg,hh]=bb1;
+(3) [100, 200, 300]
+gg;
+100
+hh;
+200
+var bb = {x:100,y:200,z:300};
+undefined
+var x = bb.x;
+undefined
+x;
+100
+console.log("Value of X is "+x+" Value of BB is "+bb.x);
+VM1368:1 Value of X is 100 Value of BB is 100
+undefined
+console.log(`Value of X is ${x} and Value of BB is ${bb.x}`);
+VM1410:1 Value of X is 100 and Value of BB is 100
+undefined
+var gg = "hkjfhgjkhdfjkghjkdfgjkhkdfgkjgfkhgfdhkfdhkhkjhgkfjkj"+
+"fhdkjgjkfdhjkghjdkfghjkhdfjkghghjjdfkjghjkdfhgjkhjkdhjgkhdjkfghjkdhfjkg"+
+"gbdhjghjdhjfdhjfghjdgfj";
+undefined
+gg =`nfhgkjdfgdjkfhkjdfhkjghkjdghkjfdhgjhjkgfdhjkdfhgjkhfdjkghkgfhdjk
+gjhdfghkdjhgjkdhfkjghjkdfhgkjdhfjkgdjkghjkdhjkhdjkfhdkjhkfjdkjdfjkhdfjkh
+ghfjkhjkdhgjkgjkhdjkghjkdhjkghdhfjkkhgjf`;
+"nfhgkjdfgdjkfhkjdfhkjghkjdghkjfdhgjhjkgfdhjkdfhgjkhfdjkghkgfhdjk
+gjhdfghkdjhgjkdhfkjghjkdfhgkjdhfjkgdjkghjkdhjkhdjkfhdkjhkfjdkjdfjkhdfjkh
+ghfjkhjkdhgjkgjkhdjkghjkdhjkghdhfjkkhgjf"
+gg;
+"nfhgkjdfgdjkfhkjdfhkjghkjdghkjfdhgjhjkgfdhjkdfhgjkhfdjkghkgfhdjk
+gjhdfghkdjhgjkdhfkjghjkdfhgkjdhfjkgdjkghjkdhjkhdjkfhdkjhkfjdkjdfjkhdfjkh
+ghfjkhjkdhgjkgjkhdjkghjkdhjkghdhfjkkhgjf"
+var bb = {x:100,y:200,z:300};
+undefined
+bb.x;
+100
+var nn ="x";
+undefined
+bb.nn;
+undefined
+bb[nn];
+100
+bb.x;
+100
+function whoIsThis(){
+console.log("Name is "+this.name);
+}
+undefined
+window.whoIsThis();
+VM1561:2 Name is 
+undefined
+whoIsThis();
+VM1561:2 Name is 
+undefined
+function whoIsThis(){
+console.log("Name is "+this.name);
+}
+undefined
+name = "Ram ";
+"Ram "
+window.name;
+"Ram "
+window.whoIsThis();
+VM1596:2 Name is Ram 
+undefined
+var obj = {name:'Shyam'};
+undefined
+obj.name;
+"Shyam"
+whoIsThis.apply(obj);
+VM1596:2 Name is Shyam
+undefined
+whoIsThis();
+VM1596:2 Name is Ram 
+undefined
+var cc = whoIsThis.bind(obj);
+undefined
+typeof cc;
+"function"
+cc;
+function whoIsThis(){
+console.log("Name is "+this.name);
+}
+cc();
+VM1596:2 Name is Shyam
+undefined
+cc();
+VM1596:2 Name is Shyam
+undefined

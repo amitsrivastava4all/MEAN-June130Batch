@@ -1,0 +1,24 @@
+var t = document.getElementsByClassName("operation");
+undefined
+typeof t;
+"object"
+t instanceof Array;
+false
+t instanceof HTMLCollection;
+true
+Array.prototype;
+[constructor: function, toString: function, toLocaleString: function, join: function, pop: function…]concat: function concat()constructor: function Array()copyWithin: function copyWithin()entries: function entries()every: function every()fill: function fill()filter: function filter()find: function find()findIndex: function findIndex()forEach: function forEach()includes: function includes()indexOf: function indexOf()join: function join()keys: function keys()lastIndexOf: function lastIndexOf()length: 0map: function map()pop: function pop()push: function push()reduce: function reduce()reduceRight: function reduceRight()reverse: function reverse()shift: function shift()slice: function slice()some: function some()sort: function sort()splice: function splice()toLocaleString: function toLocaleString()toString: function toString()unshift: function unshift()Symbol(Symbol.iterator): function values()Symbol(Symbol.unscopables): Object__proto__: Object
+HTMLCollection.prototype;
+HTMLCollection {Symbol(Symbol.toStringTag): "HTMLCollection", item: function, namedItem: function, constructor: function…}item: function item()length: (...)namedItem: function namedItem()constructor: function HTMLCollection()Symbol(Symbol.iterator): function values()Symbol(Symbol.toStringTag): "HTMLCollection"get length: function ()__proto__: Object
+Array.prototype.forEach.apply(t,[function(bt){
+console.log(bt.innerHTML);
+})]
+VM284:3 Uncaught SyntaxError: Unexpected token )
+Array.prototype.forEach.apply(t,[function(bt){
+console.log(bt.innerHTML);
+}]);
+VM290:2 +
+VM290:2 -
+VM290:2 *
+VM290:2 /
+undefined
