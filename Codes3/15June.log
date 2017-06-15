@@ -1,0 +1,61 @@
+var tbody = document.getElementById("itemlist");
+	
+undefined
+tbody.childNodes;
+(2) [text, tr.red]length: 20: textassignedSlot: nullbaseURI: "http://127.0.0.1:59688/ItemCRUD/pages/index.html"childNodes: NodeList(0)data: "↵				↵			"firstChild: nullisConnected: truelastChild: nulllength: 9nextElementSibling: tr.rednextSibling: tr.rednodeName: "#text"nodeType: 3nodeValue: "↵				↵			"ownerDocument: documentparentElement: tbody#itemlistparentNode: tbody#itemlistpreviousElementSibling: nullpreviousSibling: nulltextContent: "↵				↵			"wholeText: "↵				↵			"__proto__: Text1: tr.red__proto__: NodeList
+tbody.rows;
+[tr.red]length: 10: tr.redaccessKey: ""align: ""assignedSlot: nullattributes: NamedNodeMapbaseURI: "http://127.0.0.1:59688/ItemCRUD/pages/index.html"bgColor: ""cells: HTMLCollection(7)ch: ""chOff: ""childElementCount: 7childNodes: NodeList(7)children: HTMLCollection(7)classList: DOMTokenList(1)className: "red"clientHeight: 107clientLeft: 0clientTop: 0clientWidth: 455contentEditable: "inherit"dataset: DOMStringMapdir: ""draggable: falsefirstChild: tdfirstElementChild: tdhidden: falseid: ""innerHTML: "<td>1</td><td>hffjhkgkl</td><td>gfgjdkfjgkldfkjl</td><td>54353</td><td>555</td><td>gdfgkjhdfk</td><td><img src="../images/delete.jpg" class="showcursor"></td>"innerText: "1	hffjhkgkl	gfgjdkfjgkldfkjl	54353	555	gdfgkjhdfk	"isConnected: trueisContentEditable: falselang: ""lastChild: tdlastElementChild: tdlocalName: "tr"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: nullnextSibling: nullnodeName: "TR"nodeType: 1nodeValue: nulloffsetHeight: 107offsetLeft: 0offsetParent: tableoffsetTop: 26offsetWidth: 455onabort: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforepaste: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextmenu: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonseeked: nullonseeking: nullonselect: nullonselectstart: nullonshow: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullonvolumechange: nullonwaiting: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwheel: nullouterHTML: "<tr class="red"><td>1</td><td>hffjhkgkl</td><td>gfgjdkfjgkldfkjl</td><td>54353</td><td>555</td><td>gdfgkjhdfk</td><td><img src="../images/delete.jpg" class="showcursor"></td></tr>"outerText: "1	hffjhkgkl	gfgjdkfjgkldfkjl	54353	555	gdfgkjhdfk	"ownerDocument: documentparentElement: tbody#itemlistparentNode: tbody#itemlistprefix: nullpreviousElementSibling: nullpreviousSibling: textrowIndex: 1scrollHeight: 107scrollLeft: 0scrollTop: 0scrollWidth: 455sectionRowIndex: 0shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclarationtabIndex: -1tagName: "TR"textContent: "1hffjhkgklgfgjdkfjgkldfkjl54353555gdfgkjhdfk"title: ""translate: truevAlign: ""__proto__: HTMLTableRowElement__proto__: HTMLCollection
+for(var i= 0; i<tbody.rows.length; i++){
+console.log(tbody.rows[i]);
+}
+VM353:2 <tr class=​"red">​…​</tr>​
+undefined
+for(var i= 0; i<tbody.rows.length; i++){
+console.log(tbody.rows[i].remove("red"));
+}
+VM365:2 undefined
+undefined
+for(var i= 0; i<tbody.rows.length; i++){
+console.log(tbody.rows[i].classList.remove("red");
+}
+VM421:2 Uncaught SyntaxError: missing ) after argument list
+for(var i= 0; i<tbody.rows.length; i++){
+console.log(tbody.rows[i].classList.remove("red"));
+}
+undefined
+Navigated to http://127.0.0.1:59688/ItemCRUD/pages/index.html
+for(var i= 0; i<tbody.rows.length; i++){
+console.log(tbody.rows[i].classList.remove("red"));
+}
+VM429:1 Uncaught ReferenceError: tbody is not defined
+    at <anonymous>:1:17
+(anonymous) @ VM429:1
+var tbody = document.getElementById("itemlist");
+	
+undefined
+for(var i= 0; i<tbody.rows.length; i++){
+console.log(tbody.rows[i].classList.remove("red"));
+}
+VM431:2 undefined
+VM431:2 undefined
+undefined
+for(var i= 0; i<tbody.rows.length; i++){
+if(tbody.rows[i].classList.contains("red"){
+console.log(tbody.rows[i].classList.remove("red"));
+}
+}
+VM447:2 Uncaught SyntaxError: Unexpected token {
+for(var i= 0; i<tbody.rows.length; i++){
+if(tbody.rows[i].classList.contains("red")){
+console.log(tbody.rows[i].classList.remove("red"));
+}
+}
+undefined
+for(var i= 0; i<tbody.rows.length; i++){
+if(tbody.rows[i].classList.contains("red")){
+console.log(tbody.rows[i].classList.remove("red"));
+}
+}
+VM449:3 undefined
+VM449:3 undefined
+undefined

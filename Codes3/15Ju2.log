@@ -1,0 +1,85 @@
+var tt=[10,20,30,40,50];
+undefined
+tt.forEach(function(r){
+console.log(r);
+});
+VM117:2 10
+VM117:2 20
+VM117:2 30
+VM117:2 40
+VM117:2 50
+undefined
+var bb = document.getElementsByClassName("operation");
+undefined
+bb instanceof Array;
+false
+Array.prototype.forEach.apply(bb,[function(r){
+console.log(r.innerHTML);
+}]);
+VM265:2 +
+VM265:2 -
+VM265:2 *
+VM265:2 /
+undefined
+Array.prototype.forEach.call(bb,function(r){
+console.log(r.innerHTML);
+});
+VM274:2 +
+VM274:2 -
+VM274:2 *
+VM274:2 /
+undefined
+var ss = Array.prototype.forEach.bind(bb);
+undefined
+ss(function(r){
+console.log(r.innerHTML);
+});
+VM349:2 +
+VM349:2 -
+VM349:2 *
+VM349:2 /
+undefined
+Array.prototype.forEach.call(bb,(r)=>console.log(r.innerHTML));
+VM352:1 +
+VM352:1 -
+VM352:1 *
+VM352:1 /
+undefined
+var x = new String("hello");
+undefined
+x.length();
+VM452:1 Uncaught TypeError: x.length is not a function
+    at <anonymous>:1:3
+(anonymous) @ VM452:1
+x.length;
+5
+x.toUpperCase();
+"HELLO"
+x.toLowerCase();
+"hello"
+x.indexOf("e");
+1
+String.prototype;
+String {length: 0, constructor: function, charAt: function, charCodeAt: function, concat: function…}anchor: function anchor()big: function big()blink: function blink()bold: function bold()charAt: function charAt()charCodeAt: function charCodeAt()codePointAt: function codePointAt()concat: function concat()constructor: function String()endsWith: function endsWith()fixed: function fixed()fontcolor: function fontcolor()fontsize: function fontsize()includes: function includes()indexOf: function indexOf()italics: function italics()lastIndexOf: function lastIndexOf()length: 0link: function link()localeCompare: function localeCompare()match: function match()normalize: function normalize()padEnd: function padEnd()padStart: function padStart()repeat: function repeat()replace: function replace()search: function search()slice: function slice()small: function small()split: function split()startsWith: function startsWith()strike: function strike()sub: function sub()substr: function substr()substring: function substring()sup: function sup()toLocaleLowerCase: function toLocaleLowerCase()toLocaleUpperCase: function toLocaleUpperCase()toLowerCase: function toLowerCase()toString: function toString()toUpperCase: function toUpperCase()trim: function trim()trimLeft: function trimLeft()trimRight: function trimRight()valueOf: function valueOf()Symbol(Symbol.iterator): function [Symbol.iterator]()__proto__: Object[[PrimitiveValue]]: ""
+String.prototype.funwithstr=function(str,rept){
+var temp = "";
+for(var i = 1; i<=rept; i++){
+temp+=str;
+}
+return temp;
+
+};
+function (str,rept){
+var temp = "";
+for(var i = 1; i<=rept; i++){
+temp+=str;
+}
+return temp;
+
+}
+var d = new String();
+undefined
+d.funwithstr("*",10);
+"**********"
+d.funwithstr("*",100);
+"****************************************************************************************************"

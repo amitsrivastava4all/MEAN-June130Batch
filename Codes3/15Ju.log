@@ -1,0 +1,20 @@
+var ff = [10,20,30];
+undefined
+ff.splice(1,1);
+[20]
+ff;
+(2) [10, 30]
+ff= [10,20,30,40,50,10,10,20,10]
+(9) [10, 20, 30, 40, 50, 10, 10, 20, 10]
+var img = document.createElement("img");
+undefined
+img;
+<img>​
+img.src="hgdkjhgjdhfk";
+"hgdkjhgjdhfk"
+img;
+<img src=​"hgdkjhgjdhfk">​
+img.id = "a1";
+"a1"
+img;
+<img src=​"hgdkjhgjdhfk" id=​"a1">​

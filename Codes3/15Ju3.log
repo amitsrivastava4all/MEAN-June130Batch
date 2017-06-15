@@ -1,0 +1,100 @@
+var object = {x:100,y:200,z:300};
+undefined
+for(var key in object){
+console.log(key+" "+object[key]);
+}
+VM137:2 x 100
+VM137:2 y 200
+VM137:2 z 300
+undefined
+function whoIsThis(){
+console.log("Name is "+this.name);
+}
+undefined
+name = "ram";
+"ram"
+window.name;
+"ram"
+whoIsThis();
+VM163:2 Name is ram
+undefined
+function whoIsThis(middlename, lastname){
+console.log("Name is "+this.firstname);
+}
+undefined
+function whoIsThis(middlename, lastname){
+console.log("Name is "+this.firstname+this.middlename+this.lastname);
+}
+undefined
+function whoIsThis(middlename, lastname){
+console.log("Name is "+this.firstname+middlename+lastname);
+}
+undefined
+whoIsThis();
+VM304:2 Name is undefinedundefinedundefined
+undefined
+firstname="Ram";
+"Ram"
+whoIsThis();
+VM304:2 Name is Ramundefinedundefined
+undefined
+whoIsThis("kumar","sharma");
+VM304:2 Name is Ramkumarsharma
+undefined
+var object = {firstname:'Shyam'};
+undefined
+whoIsThis;
+function whoIsThis(middlename, lastname){
+console.log("Name is "+this.firstname+middlename+lastname);
+}
+console.dir(whoIsThis);
+VM385:1 function whoIsThis(middlename, lastname)arguments: nullcaller: nulllength: 2name: "whoIsThis"prototype: Object__proto__: function ()apply: function apply()arguments: (...)bind: function bind()call: function call()caller: (...)constructor: function Function()length: 0name: ""toString: function toString()Symbol(Symbol.hasInstance): function [Symbol.hasInstance]()get arguments: function ThrowTypeError()set arguments: function ThrowTypeError()get caller: function ThrowTypeError()set caller: function ThrowTypeError()__proto__: Object[[FunctionLocation]]: <unknown>[[FunctionLocation]]: VM304:1[[Scopes]]: Scopes[1]
+undefined
+whoIsThis.apply(object);
+VM304:2 Name is Shyamundefinedundefined
+undefined
+whoIsThis.apply(object,["kumar","sharma"]);
+VM304:2 Name is Shyamkumarsharma
+undefined
+whoIsThis();
+VM304:2 Name is Ramundefinedundefined
+undefined
+var ee = whoIsThis.bind(object);
+undefined
+ee("kumar","sharma");
+VM304:2 Name is Shyamkumarsharma
+undefined
+var object2 = {firstname:'Shyam'};
+undefined
+var object2 = {firstname:'Mike'};
+undefined
+var ff = whoIsThis.bind(object2);
+undefined
+ee;
+function whoIsThis(middlename, lastname){
+console.log("Name is "+this.firstname+middlename+lastname);
+}
+ff;
+function whoIsThis(middlename, lastname){
+console.log("Name is "+this.firstname+middlename+lastname);
+}
+function curry(){
+ee("Kumar","Sharma");
+ff("Tyson");
+}
+undefined
+curry();
+VM304:2 Name is ShyamKumarSharma
+VM304:2 Name is MikeTysonundefined
+undefined
+whoIsThis.call(object,"kumar","sharma");
+VM304:2 Name is Shyamkumarsharma
+undefined
+whoIsThis.apply(object,);
+VM304:2 Name is Shyamundefinedundefined
+undefined
+var qq =["kumar","sharma"];
+undefined
+whoIsThis.apply(object,qq);
+VM304:2 Name is Shyamkumarsharma
+undefined
