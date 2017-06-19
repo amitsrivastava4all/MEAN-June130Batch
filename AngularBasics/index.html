@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular First Demo</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="libs/angular.min.js"></script>	
+	
+
+</head>
+<body >
+<div ng-app>
+	<label for="">Enter the First Name</label>
+	<input type="text" ng-model="first">
+	<h1>Welcome {{first|uppercase}}</h1>
+	<input ng-init="price=0" type="text" ng-model="price"><input ng-init="qt=0" ng-model="qt" type="text">
+	<h1 class="{{first}}">Amount is {{price*qt|currency}}</h1>
+</div>
+	
+<!--
+	<input onkeyup="showMe()" id="firstname" type="text" placeholder="Type First Name Here">
+	<h1>Welcome <span id="msg"></span></h1>
+-->
+</body>
+</html>
