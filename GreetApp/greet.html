@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Greet App</title>
+	
+	<script src="libs/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/model.js"></script>
+	<script src="js/controller.js"></script>
+</head>
+<body ng-app="greetapp">
+<div ng-controller="greetctrl">
+	<table >
+		<tr>
+			<td><label for="">FirstName</label></td>
+			<td><input ng-model="firstname" type="text" placeholder="Type First Name" ></td>
+		</tr>
+		<tr>
+			<td><label for="">LastName</label></td>
+			<td><input type="text" ng-model="lastname" placeholder="Type Last Name" ></td>
+		</tr>
+		<tr>
+			<td><button ng-click="sayWelcome()">Greet</button></td>
+			<td><button>Clear</button></td>
+		</tr>
+			
+	</table>
+	<h1>{{message}}</h1>
+	</div>
+</body>
+</html>
