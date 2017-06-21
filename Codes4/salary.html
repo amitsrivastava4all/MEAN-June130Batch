@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="libs/angular.min.js"></script>
+	<script>
+	var app = angular.module("salaryapp",[]);
+	app.controller("salaryctrl",($scope)=>{
+		
+	});	
+		app.controller("computectrl",($scope)=>{
+			$scope.hra = 0.30;
+			$scope.ta = 0.20;
+			$scope.da = 0.10;
+	});	
+	</script>
+</head>
+<body ng-app="salaryapp">
+	<div ng-controller="salaryctrl">
+		<fieldset>
+			<legend>Salary</legend>
+			<input type="text" placeholder="Type Salary" ng-init="salary=0" ng-model="salary">
+		</fieldset>
+		
+		<div ng-controller="computectrl">
+			<fieldset>
+				<legend>Compute</legend>
+				<p>HRA {{salary * hra}}</p>
+				<p>TA {{salary * ta}}</p>
+				<p>DA {{salary * da}}</p>
+			</fieldset>
+		</div>
+		
+	</div>
+</body>
+</html>

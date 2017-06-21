@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Controller Data Sharing</title>
+	<script src="libs/angular.min.js"></script>
+	<script>
+	var app2 = angular.module("factoryapp",[]);
+		app2.factory("myfactory",()=>{
+			var object = {
+				x:0,y:0
+			}
+			return object;
+		});	
+	var app = angular.module("myapp",["factoryapp"]);
+		app.controller("myctrl",($scope)=>{
+			//$scope.firstName = "ram";
+		});
+		app.controller("myctrl2",($scope,$rootScope)=>{
+			//$scope.lastname = "kumar"
+			$scope.passName=()=>{
+				$rootScope.firstName = $scope.firstName;
+				$rootScope.lastName = $scope.lastname;
+			}
+		});
+		app.controller("myctrl3",($scope)=>{
+			
+		});
+		
+		
+		app.controller("myctrl4",($scope,myfactory)=>{
+			$scope.pushValue=()=>{
+				myfactory.x=$scope.xval;
+				myfactory.y=$scope.yval;
+			}
+		});
+		
+		app.controller("myctrl5",($scope,myfactory)=>{
+			$scope.pullValue=()=>{
+				$scope.x = myfactory.x;
+				$scope.y = myfactory.y;
+				
+			}
+		});
+		
+	</script>
+</head>
+<body ng-app="myapp">
+	<div ng-controller="myctrl">
+	<input type="text" ng-model="firstName">
+		{{firstName}}
+		<br>
+		<div ng-controller="myctrl2">
+		<input type="text" ng-model="lastname">
+		<br>
+		{{firstName}} {{lastname}} 
+		<button ng-click="passName()">Pass Names</button>
+	</div>
+	</div>
+	<hr>
+	<div ng-controller="myctrl3">
+	<input type="text" ng-model="middleName" placeholder="Type Middle Name">
+		{{firstName}} {{middleName}} {{lastName}}
+	</div>
+	
+	<hr>
+	<div ng-controller="myctrl4">
+	<input type="text" ng-model="xval">
+	<input type="text" ng-model="yval">
+		<button ng-click="pushValue()">Push</button>
+	</div>
+	<div ng-controller="myctrl5">
+		<button ng-click="pullValue()">Pull</button>
+		Value of X is {{x}} and Value of Y is {{y}}
+	</div>
+</body>
+</html>
