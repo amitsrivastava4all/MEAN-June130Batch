@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/design.css">
+	<script src="libs/angular.min.js"></script>
+	<script>
+	var app2 = angular.module("myapp2",[]);
+	app2.factory("myfactory",()=>{
+		var object = {
+			vatresult :0,
+			salaryArr:[],
+			compute(price,qt){
+				var amount = price * qt;
+				this.addInArray(amount);
+				//return this.salaryArr;
+				return amount;
+			},
+			addInArray(amount){
+				this.salaryArr.push(amount);
+				console.log(this.salaryArr);
+			},
+			getSalaryArr(){
+				return this.salaryArr;
+			},
+			sum(){
+				var totalSum =0;
+				this.salaryArr.forEach(function(s){
+					totalSum +=s;
+				});
+				return totalSum;
+			},
+			computeVAT(){
+				this.vatresult= this.sum() * 0.15; 
+				return this.vatresult;
+			}
+			
+			
+		}
+		return object;
+	});	
+	var app = angular.module("myapp",["myapp2"]);
+	app.controller("myctrl",($scope,$rootScope,myfactory)=>{
+		$scope.compute=()=>{
+			var amount =myfactory.compute($scope.price,$scope.qt);
+			console.log("Amount is ",amount);
+			$scope.salaryArr = myfactory.getSalaryArr();
+			$scope.sum = myfactory.sum();
+			
+		}
+		$scope.computeVat=()=>{
+			$rootScope.vat = myfactory.computeVAT();
+		}
+		
+	});
+	app.controller("myctrl2",($scope,myfactory)=>{
+				   
+	});	
+		
+	</script>
+</head>
+<body ng-app="myapp">
+	<div ng-controller="myctrl">
+	<input type="text" ng-init="mydata=[{id:1001,name:'Ram',salary:9999},{id:1002,name:'Shyam',salary:29999},{id:1003,name:'Mike',salary:39999}]">
+	<input type="text" ng-model="search" placeholder="Type Value to Search">
+	<select ng-model="sort">
+		<option >id</option>
+		<option >name</option>
+		<option>salary</option>
+	</select>
+	<input type="checkbox" ng-model="rev">{{rev}}
+	<ul>
+	
+		<li ng-repeat="i in mydata|filter:search|orderBy:sort:rev">
+			{{i.id}} {{i.name}} {{i.salary}}
+		</li>
+	</ul>
+	<input type="text" ng-init="price=0" ng-model="price">
+	<input type="text" ng-model="qt" ng-init="qt=0">
+	<button ng-click="compute()">Compute</button>
+	
+	<button ng-click="computeVat()">Compute VAT</button>
+	<button>Compute Discount</button>
+	<input type="checkbox" ng-model="showMe">
+	<div ng-show="showMe">
+		Show/Hide Example {{showMe}}
+	</div>
+	<ul>
+		<li ng-repeat="i in salaryArr">
+			<span ng-class-even="'red'" ng-class-odd="'green'">{{i}}</span>
+		</li>
+		<h3 ng-class="{red:sum<200,green:sum>=200}">Total :: {{sum}}</h3>
+	</ul>
+	</div>
+	<hr>
+	<div ng-controller="myctrl2">
+		VAT is {{vat}}
+	</div>
+	<hr>
+	<div>
+		Discount Coupon
+	</div>
+</body>
+</html>
