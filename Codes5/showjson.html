@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="libs/angular.min.js"></script>
+	<script>
+	var app = angular.module("myapp",[]);
+	app.factory("myfactory",()=>{
+		var object  = {
+			getMenu(){
+				return [{id:1,name:"About Us",link:"pages/about.html",status:'Y'},{id:1,name:"Contact Us",link:"pages/contact.html",status:'Y'},{id:1,name:"News",link:"pages/news.html",status:'Y'}];
+			}
+		};
+		
+		return object;
+		
+	});
+	app.controller("myctrl",($scope,myfactory)=>{
+		$scope.menu = myfactory.getMenu();
+	});	
+		
+	</script>
+</head>
+<body ng-app="myapp">
+	<div ng-controller="myctrl">
+		<ul >
+			<li ng-repeat="i in menu|limitTo:2:1">
+				<a href="{{i.link}}">{{i.name}}</a>
+			</li>
+		</ul>
+	</div>
+	
+</body>
+</html>
