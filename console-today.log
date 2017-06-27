@@ -1,0 +1,98 @@
+var $http= {};
+undefined
+$http.get=function(){
+	return {then:function(pass,fail){
+    	if(x){
+			pass();        
+}
+else{
+fail();
+}
+}}
+}
+function (){
+	return {then:function(pass,fail){
+    	if(x){
+			pass();        
+}
+else{
+fail();
+}
+}}
+}
+$http.get=function(){
+	return {then:function(pass,fail){
+    	if(x){
+			var mydata = {name:'Ram',age:21};
+			pass(mydata);        
+}
+else{
+var er = {code:1,name:'Error Found'};
+fail(er);
+}
+}}
+}
+function (){
+	return {then:function(pass,fail){
+    	if(x){
+			var mydata = {name:'Ram',age:21};
+			pass(mydata);        
+}
+else{
+var er = {code:1,name:'Error Found'};
+fail(er);
+}
+}}
+}
+$http.get=function(){
+	return {then:function(pass,fail){
+    	if(x){
+			var mydata = {name:'Ram',age:21};
+			pass(mydata);        
+}
+else{
+var er = {code:1,name:'Error Found'};
+fail(er);
+}
+}}
+}
+function (){
+	return {then:function(pass,fail){
+    	if(x){
+			var mydata = {name:'Ram',age:21};
+			pass(mydata);        
+}
+else{
+var er = {code:1,name:'Error Found'};
+fail(er);
+}
+}}
+}
+$http.get().then(function(data){
+console.log("Data is ",data);
+},function(er){
+console.log("Error is ",er);
+})
+VM214:3 Uncaught ReferenceError: x is not defined
+    at Object.then (<anonymous>:3:6)
+    at <anonymous>:1:13
+then @ VM214:3
+(anonymous) @ VM348:1
+x = true;
+true
+$http.get().then(function(data){
+console.log("Data is ",data);
+},function(er){
+console.log("Error is ",er);
+})
+VM361:2 Data is  Object {name: "Ram", age: 21}
+undefined
+x= false;
+false
+$http.get().then(function(data){
+console.log("Data is ",data);
+},function(er){
+console.log("Error is ",er);
+})
+VM376:4 Error is  Object {code: 1, name: "Error Found"}
+undefined

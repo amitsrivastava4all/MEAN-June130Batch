@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.red{
+		color:red;
+		}
+		.green{
+		color:green;
+		}
+	</style>
+	<script src="libs/angular.min.js"></script>
+	<script>
+	var app = angular.module("myapp",[]);
+	app.controller("myctrl",($scope,myfactory)=>{
+		$scope.showMe=false;
+		$scope.redClass=false;
+		$scope.greenClass=false;
+		$scope.changeClass=()=>{
+			$scope.redClass = true;
+		}
+		$scope.callMe=()=>{
+			$scope.showMe=false;
+			var pid = $scope.playerid;
+			var promise = myfactory.callServer(pid);
+			for(var i = 1; i<=10; i++){
+				console.log("DO Something else",i);
+			}
+			promise.then(function(data){
+				$scope.result= data;
+				$scope.showMe=true;
+			},function(err){
+				$scope.result  = err;
+			})
+			
+		}
+	});
+	app.factory("myfactory",($http,$q)=>{
+		var object = {
+			callServer(pid){
+				var pr = $q.defer();
+				var url = "server.json";
+				//var url = "http://cricapi.com/api/playerStats?pid="+pid+"&apikey=A8zoDoPaQgefmB7KunnSuApSgL73";
+				$http.get(url).then(function(data){
+					console.log("result ",data);
+					pr.resolve(data.data);
+				},function(err){
+					pr.reject(err);
+				});
+				return pr.promise;
+			}
+		}
+		return object;
+	})	
+	</script>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+<button ng-click="changeClass()">Change Class</button>
+<h1 ng-class={"red":redClass,"green":greenClass}>Hello Change Class</h1>
+	Select Your Player 
+	<select ng-model="playerid" ng-change="callMe()">
+		<option value="28081">M.S.Dhoni</option>
+		<option value="35320">Sachin</option>
+	</select>
+	<div ng-show="showMe">
+	<table>
+		<tr>
+			<td>Image</td>
+			<td><img ng-src="{{result.imageURL}}" ></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td>{{result.fullName}}</td>
+		</tr>	
+		<tr>
+			<td>Profile</td>
+			<td>{{result.profile}}</td>
+		</tr>
+		<tr>
+			<td>Batting Style</td>
+			<td>{{result.battingStyle}}</td>
+		</tr>
+		<tr>	
+			<td>BORN</td>
+			<td>{{result.born}}</td>
+		</tr>
+		<tr>	
+			<td>Age</td>
+			<td>{{result.currentAge}}</td>
+		</tr>	
+		
+	</table>
+	</div>
+</body>
+</html>
