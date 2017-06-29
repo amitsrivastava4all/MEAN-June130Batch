@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CRUD</title>
+	<script src="libs/angular.min.js">
+	</script>
+	<script src="js/module.js"></script>
+	<script src="js/task.js"></script>
+	<script src="js/factory.js"></script>
+	<script src="js/controller.js"></script>
+	<link rel="stylesheet" href="stylesheet/main.css">
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+<div>
+	<fieldset>
+	<legend>crud</legend>
+	<label for="">name</label>
+	<input type="text"  ng-model="name" placeholder="type name" >
+	<label for="">description</label>
+	<textarea cols="20" rows="6" ng-model="desc" ></textarea>
+	<br>
+	{{disableButtons}}
+	<button ng-disabled="disableButtons" ng-click="addRecord()">Add</button>
+	<button ng-disabled="disableButtons">Delete</button>
+	<button>Search</button>
+	<button>Update</button>	
+	</fieldset>
+</div>
+Total Records {{countAll}}
+<br>
+Count Mark {{countMarkOnly}} and UnMark is {{countUnMark}}
+<hr>
+<div>
+	<fieldset>
+		<legend>List</legend>
+	<table border="1">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Desc</th>
+		<th>Operation</th>
+		</tr>
+		</thead>
+	<tbody>
+		<tr ng-class={"red":task.markfordeletion,"selected":task.markforedit} ng-repeat="task in tasks">
+			<td>{{task.id}}</td>
+			<td>{{task.name}}</td>
+			<td>{{task.desc}}</td>
+			<td><img ng-click="showMarking(task)" src="images/delete.png" alt="">
+			<img  src="images/edit.png" ng-click="edit(task)">
+			</td>
+			
+		</tr>
+	</tbody>
+	</table>
+	</fieldset>
+	
+</div>
+
+</body>
+</html>
