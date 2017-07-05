@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="libs/angular.min.js"></script>
+	<script src="libs/ngStorage.min.js"></script>
+	<script>
+	var app = angular.module("myapp",["ngStorage"]);
+	app.controller("myctrl",($scope,$localStorage)=>{
+			$scope.store = $localStorage;
+		$scope.storeData=()=>{
+			$scope.store.uid = $scope.userid;
+		}
+		
+	});
+	app.controller("myctrl2",($scope,$localStorage)=>{
+		$scope.getData=()=>{
+			$scope.datastore=$localStorage;
+		}
+	})	
+	</script>
+</head>
+<body ng-app="myapp" >
+<div ng-controller="myctrl">
+<input type="text" ng-model="userid" ng-change="storeData()">
+<button ng-click="store.id=store.id+1">Show Count</button>
+{{store.id}}
+<button ng-click="store.id2=store.id2+1">Show Count</button>
+{{store.id2}}
+</div>
+<div ng-controller="myctrl2">
+<button ng-click="getData()">Get Value</button>
+	<h1>
+		{{datastore.id}} {{datastore.uid}} 
+	</h1>
+</div>	
+</body>
+</html>

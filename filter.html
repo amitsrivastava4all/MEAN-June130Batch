@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="libs/angular.min.js"></script>
+	<script>
+	var app = angular.module("myapp",[]);
+	app.filter("prod",function(){
+		return function(value){
+			if(!value){
+				return "";
+			}
+			return "TCS-"+value;
+		}
+	})	;
+	</script>
+</head>
+<body ng-app="myapp">
+<input type="text" ng-init='name=""' ng-model="name">
+{{name|prod}}
+	
+</body>
+</html>
