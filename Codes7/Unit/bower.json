@@ -1,0 +1,23 @@
+{
+  "name": "unittest",
+  "description": "",
+  "main": "emifactory.js",
+  "authors": [
+    "Mukul Juneja <junejamukul7@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-mocks": "^1.6.5"
+  },
+  "dependencies": {
+    "angular": "^1.6.5"
+  }
+}

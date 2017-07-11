@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" href="custom.css">
+	<script src="../angular.min.js"></script>
+	<script src="directive.js"></script>
+</head>
+<body ng-app="myapp">
+
+	<h1 anim>This is Jquery Animation</h1>
+	<div youtubevideo="https://www.youtube.com/embed/Qg1SvpIau6U">
+		
+	</div>
+
+	<div ng-controller="myctrl">
+	Name is {{firstName|myfilter}}
+	<tcs:header></tcs:header>
+	</div>
+	<br>
+	<div  ng-controller="ctrl2">
+	<input type="text" ng-init="fourthno=0" ng-model="fourthno">
+	<sum firstno="100" secondno="200"></sum>
+	</div>
+<br>
+	<tcs:menu></tcs:menu>
+<br>
+<p>this is the content of my website</p>
+	<tcs:footer></tcs:footer>
+	
+<br>	
+</body>
+</html>
