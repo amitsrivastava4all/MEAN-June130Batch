@@ -1,0 +1,4 @@
+Node.js is a very powerful JavaScript-based framework/platform built on Google Chrome's JavaScript V8 Engine. It is used to develop I/O intensive web applications like video streaming sites, single-page applications, and other web applications. Node.js is open source, completely free, and used by thousands of developers around the world.
+For most of the examples given in this tutorial, you will find a Try it option, so just make use of this option to execute your Node.js programs on the spot and enjoy your learning.
+
+Try the following example using the Try it option available at the top right corner of the below sample code box (on our website):
